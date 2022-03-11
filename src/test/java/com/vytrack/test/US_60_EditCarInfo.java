@@ -28,7 +28,7 @@ public class US_60_EditCarInfo extends TestBase {
     public Object[][] credentials() {
         return new Object[][]{{"usernameStoreManager1", "password"},
                 {"usernameTruckDrivers2", "password"},
-               // {"usernameSalesManager1", "password"},
+               {"usernameSalesManager1", "password"},
         };}
 
     @Test(dataProvider = "US-60_Credentials")
@@ -36,7 +36,6 @@ public class US_60_EditCarInfo extends TestBase {
 
         VytrackUtils.login(getProperty(username), getProperty(passwords)); //it's for login to homepage
         BrowserUtils.sleep(2);
-        //1. Find a Fleet tab and hover on it
 
         WebElement fleetTabs = Driver.getDriver().findElement(By.xpath("//span[normalize-space()='Fleet' and contains(@class, 'title title-level-1')]"));
         actions.moveToElement(fleetTabs).perform();
