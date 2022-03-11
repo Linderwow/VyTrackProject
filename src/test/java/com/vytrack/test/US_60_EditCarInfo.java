@@ -12,10 +12,15 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import static com.vytrack.utilities.ConfigurationReader.getProperty;
 import static com.vytrack.utilities.Driver.getDriver;
+import static org.testng.Assert.assertEquals;
 
 public class US_60_EditCarInfo extends TestBase {
 
@@ -23,19 +28,25 @@ public class US_60_EditCarInfo extends TestBase {
     Actions actions = new Actions(Driver.getDriver());
     JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver(); //down casting to JS
 
-    @DataProvider(name = "US-60_Credentials")
+    /*@DataProvider(name = "US-60_Credentials")
     public Object[][] credentials() {
         return new Object[][]{
-                {"user" + faker.number().numberBetween(191, 197), "UserUser123"},//user191 --- user197
-                /*  {"storemanager" + faker.number().numberBetween(67, 72), "UserUser123"},*///storemanager67  ---  storemanager72
-                  /*{"salesmanager" + faker.number().numberBetween(275, 278), "UserUser123"}*/}; //salesmanager275 --- salesmanager278
+               // {"user" + faker.number().numberBetween(191, 192), "UserUser123"},//user191 --- user197
+              {"storemanager" + faker.number().numberBetween(67, 68), "UserUser123"},//storemanager67  ---  storemanager72
+               {"salesmanager" + faker.number().numberBetween(275, 276), "UserUser123"}
+        }; //salesmanager275 --- salesmanager278
 
-    }
+    }*/
+    @DataProvider(name = "US-60_Credentials")
+    public Object[][] credentials() {
+        return new Object[][]{{"usernameStoreManager1", "password"},
+                {"usernameTruckDrivers3", "password"},
+        };}
 
     @Test(dataProvider = "US-60_Credentials")
-    public void edit_car_info_test(String usernames, String passwords) {
+    public void edit_car_info_test(String username, String passwords) {
 
-        VytrackUtils.login(usernames, passwords); //it's for login to homepage
+        VytrackUtils.login(getProperty(username), getProperty(passwords)); //it's for login to homepage
         BrowserUtils.sleep(2);
         //1. Find a Fleet tab and hover on it
 
@@ -73,6 +84,7 @@ public class US_60_EditCarInfo extends TestBase {
         Assert.assertEquals(delete, expectedDelete);
         Assert.assertEquals(edit, expectedEdit);
         Assert.assertEquals(view, expectedView);
+
 
     }
 }
