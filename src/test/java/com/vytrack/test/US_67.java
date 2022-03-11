@@ -3,7 +3,7 @@ package com.vytrack.test;
 import com.vytrack.utilities.BrowserUtils;
 import com.vytrack.utilities.ConfigurationReader;
 import com.vytrack.utilities.Driver;
-import com.vytrack.utilities.VyTrack_Login;
+import com.vytrack.utilities.VytrackUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
@@ -57,7 +57,7 @@ public class US_67 extends TestBase {
     public void truckDriversTest(String username, String password) {
         //AC #1: Users should see three columns on the Vehicle Costs page.
             //step1:
-        VyTrack_Login.login(Driver.getDriver(),ConfigurationReader.getProperty(username) , ConfigurationReader.getProperty(password));
+        VytrackUtils.login(ConfigurationReader.getProperty(username) , ConfigurationReader.getProperty(password));
         BrowserUtils.sleep(2);
         Actions actions = new Actions(Driver.getDriver());
         WebElement fleetTabElm = Driver.getDriver().findElement(By.xpath("//*[@id=\"main-menu\"]/ul/li[1]/a/span"));
@@ -93,7 +93,7 @@ public class US_67 extends TestBase {
     public void storeManagerTest(String username, String password){
         //AC #1: Users should see three columns on the Vehicle Costs page.
             //step1:
-        VyTrack_Login.login(Driver.getDriver(),ConfigurationReader.getProperty(username) , ConfigurationReader.getProperty(password));
+        VytrackUtils.login(ConfigurationReader.getProperty(username) , ConfigurationReader.getProperty(password));
         BrowserUtils.sleep(2);
         Actions actions = new Actions(Driver.getDriver());
         WebElement fleetTabElm = Driver.getDriver().findElement(By.xpath("//*[@id=\"main-menu\"]/ul/li[2]/a/span"));
@@ -125,7 +125,7 @@ public class US_67 extends TestBase {
     public void salesManagerTest(String username, String password){
         //AC #1: Users should see three columns on the Vehicle Costs page.
         //step1:
-        VyTrack_Login.login(Driver.getDriver(),ConfigurationReader.getProperty(username) , ConfigurationReader.getProperty(password));
+        VytrackUtils.login(ConfigurationReader.getProperty(username) , ConfigurationReader.getProperty(password));
         BrowserUtils.sleep(2);
         Actions actions = new Actions(Driver.getDriver());
         WebElement fleetTabElm = Driver.getDriver().findElement(By.xpath("//*[@id=\"main-menu\"]/ul/li[2]/a/span"));
