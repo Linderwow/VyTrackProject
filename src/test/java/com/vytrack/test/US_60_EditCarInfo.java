@@ -24,23 +24,11 @@ import static org.testng.Assert.assertEquals;
 
 public class US_60_EditCarInfo extends TestBase {
 
-    Faker faker = new Faker();
-    Actions actions = new Actions(Driver.getDriver());
-    JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver(); //down casting to JS
-
-    /*@DataProvider(name = "US-60_Credentials")
-    public Object[][] credentials() {
-        return new Object[][]{
-               // {"user" + faker.number().numberBetween(191, 192), "UserUser123"},//user191 --- user197
-              {"storemanager" + faker.number().numberBetween(67, 68), "UserUser123"},//storemanager67  ---  storemanager72
-               {"salesmanager" + faker.number().numberBetween(275, 276), "UserUser123"}
-        }; //salesmanager275 --- salesmanager278
-
-    }*/
     @DataProvider(name = "US-60_Credentials")
     public Object[][] credentials() {
         return new Object[][]{{"usernameStoreManager1", "password"},
-                {"usernameTruckDrivers3", "password"},
+                {"usernameTruckDrivers2", "password"},
+               // {"usernameSalesManager1", "password"},
         };}
 
     @Test(dataProvider = "US-60_Credentials")
@@ -66,8 +54,7 @@ public class US_60_EditCarInfo extends TestBase {
         getDriver().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         actions.moveToElement(dots.get(num)).pause(1000).click(dots.get(num)).pause(2000).perform();
 
-        Driver.getDriver().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-
+        Driver.getDriver().manage().timeouts().implicitlyWait(6, TimeUnit.SECONDS);
 
         WebElement deleteBtn = Driver.getDriver().findElement(By.xpath("//div[@class='dropdown']//li[3]//a"));
         WebElement editBtn = Driver.getDriver().findElement(By.xpath("//div[@class='dropdown']//li[2]//a"));
@@ -84,7 +71,6 @@ public class US_60_EditCarInfo extends TestBase {
         Assert.assertEquals(delete, expectedDelete);
         Assert.assertEquals(edit, expectedEdit);
         Assert.assertEquals(view, expectedView);
-
 
     }
 }
