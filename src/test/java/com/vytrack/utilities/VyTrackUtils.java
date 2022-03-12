@@ -11,48 +11,54 @@ import static com.vytrack.utilities.ConfigurationReader.getProperty;
 import static com.vytrack.utilities.Driver.getDriver;
 
 public class VyTrackUtils {
-    public static LoginPage LoginPage;
-
     public static void login(String username, String password) {
-        LoginPage=new LoginPage();
+        //go to website
+        Driver.getDriver().get(ConfigurationReader.getProperty("env"));
         // pass username
-        LoginPage.inputUsername.sendKeys(username);
+        // Driver.getDriver().findElement(By.cssSelector("#prependedInput"));
+        Driver.getDriver().findElement(By.id("prependedInput")).sendKeys(username);
         //pass password
-       LoginPage.inputPassword.sendKeys(password);
+        Driver.getDriver().findElement(By.cssSelector("#prependedInput2")).sendKeys(password);
         //click login button
-        LoginPage.signInButton.click();
+        Driver.getDriver().findElement(By.tagName("button")).click();
+
     }
 
     public static void loginAsDriver() {
-        LoginPage=new LoginPage();
+        //go to website
+        Driver.getDriver().get(ConfigurationReader.getProperty("env"));
         // pass username
-        LoginPage.inputUsername.sendKeys(getProperty("usernameTruckDrivers1"));
+        // Driver.getDriver().findElement(By.cssSelector("#prependedInput"));
+        Driver.getDriver().findElement(By.id("prependedInput")).sendKeys(ConfigurationReader.getProperty("usernameTruckDrivers1"));
         //pass password
-        LoginPage.inputPassword.sendKeys(getProperty("password"));
+        Driver.getDriver().findElement(By.cssSelector("#prependedInput2")).sendKeys(ConfigurationReader.getProperty("password"));
         //click login button
-        LoginPage.signInButton.click();
+        Driver.getDriver().findElement(By.tagName("button")).click();
     }
 
     public static void loginAsStoreManager() {
-        LoginPage=new LoginPage();
+        //go to website
+        Driver.getDriver().get(ConfigurationReader.getProperty("env"));
         // pass username
-        LoginPage.inputUsername.sendKeys(getProperty("usernameStoreManager1"));
+        // Driver.getDriver().findElement(By.cssSelector("#prependedInput"));
+        Driver.getDriver().findElement(By.id("prependedInput")).sendKeys(ConfigurationReader.getProperty("usernameStoreManager1"));
         //pass password
-        LoginPage.inputPassword.sendKeys(getProperty("password"));
+        Driver.getDriver().findElement(By.cssSelector("#prependedInput2")).sendKeys(ConfigurationReader.getProperty("password"));
         //click login button
-        LoginPage.signInButton.click();
+        Driver.getDriver().findElement(By.tagName("button")).click();
     }
 
     public static void loginAsSalesManager() {
-        LoginPage=new LoginPage();
+        //go to website
+        Driver.getDriver().get(ConfigurationReader.getProperty("env"));
         // pass username
-        LoginPage.inputUsername.sendKeys(getProperty("usernameSalesManager1"));
+        // Driver.getDriver().findElement(By.cssSelector("#prependedInput"));
+        Driver.getDriver().findElement(By.id("prependedInput")).sendKeys(ConfigurationReader.getProperty("usernameSalesManager1"));
         //pass password
-        LoginPage.inputPassword.sendKeys(getProperty("password"));
+        Driver.getDriver().findElement(By.cssSelector("#prependedInput2")).sendKeys(ConfigurationReader.getProperty("password"));
         //click login button
-        LoginPage.signInButton.click();
+        Driver.getDriver().findElement(By.tagName("button")).click();
     }
-
     public static void waitTillLoaderMaskDisappear() {
         try {
             WebDriverWait wait = new WebDriverWait(getDriver(), 20);
