@@ -22,8 +22,6 @@ public class BrowserUtils {
 
         }
     }
-
-
     /*
     This method accepts 3 arguments.
     Arg1: webdriver
@@ -50,7 +48,6 @@ public class BrowserUtils {
         String actualTitle = Driver.getDriver().getTitle();
         Assert.assertTrue(actualTitle.contains(expectedInTitle));
     }
-
     /*
     This method accepts a String "expectedTitle" and Asserts if it is true
      */
