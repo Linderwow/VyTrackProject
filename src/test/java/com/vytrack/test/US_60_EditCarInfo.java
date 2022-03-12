@@ -27,7 +27,7 @@ public class US_60_EditCarInfo extends TestBase {
     @DataProvider(name = "US-60_Credentials")
     public Object[][] credentials() {
         return new Object[][]{{"usernameStoreManager1", "password"},
-                {"usernameTruckDrivers3", "password"},
+                {"usernameTruckDrivers2", "password"},
                 {"usernameSalesManager1", "password"},
         };}
 
