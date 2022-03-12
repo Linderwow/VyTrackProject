@@ -1,7 +1,7 @@
 package com.vytrack.utilities;
 
 import com.vytrack.pages.LoginPage;
-import com.vytrack.tests.TestBase;
+import com.vytrack.test.TestBase;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -10,9 +10,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import static com.vytrack.utilities.ConfigurationReader.getProperty;
 import static com.vytrack.utilities.Driver.getDriver;
 
-public class VyTrackUtils extends TestBase {
+public class VyTrackUtils {
+    public static LoginPage LoginPage;
 
     public static void login(String username, String password) {
+        LoginPage=new LoginPage();
         // pass username
         LoginPage.inputUsername.sendKeys(username);
         //pass password
@@ -22,6 +24,7 @@ public class VyTrackUtils extends TestBase {
     }
 
     public static void loginAsDriver() {
+        LoginPage=new LoginPage();
         // pass username
         LoginPage.inputUsername.sendKeys(getProperty("usernameTruckDrivers1"));
         //pass password
@@ -31,6 +34,7 @@ public class VyTrackUtils extends TestBase {
     }
 
     public static void loginAsStoreManager() {
+        LoginPage=new LoginPage();
         // pass username
         LoginPage.inputUsername.sendKeys(getProperty("usernameStoreManager1"));
         //pass password
@@ -40,6 +44,7 @@ public class VyTrackUtils extends TestBase {
     }
 
     public static void loginAsSalesManager() {
+        LoginPage=new LoginPage();
         // pass username
         LoginPage.inputUsername.sendKeys(getProperty("usernameSalesManager1"));
         //pass password
