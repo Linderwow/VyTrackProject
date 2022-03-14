@@ -6,21 +6,12 @@ import com.vytrack.utilities.ConfigurationReader;
 import com.vytrack.utilities.Driver;
 import com.vytrack.utilities.VyTrackUtils;
 import org.openqa.selenium.*;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
-
-import static com.vytrack.utilities.ConfigurationReader.getProperty;
-import static com.vytrack.utilities.Driver.getDriver;
-import static org.testng.Assert.assertEquals;
 
 public class US_60_EditCarInfo extends TestBase {
 
