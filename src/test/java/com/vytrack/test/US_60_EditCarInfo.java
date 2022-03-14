@@ -4,7 +4,7 @@ import com.github.javafaker.Faker;
 import com.vytrack.utilities.BrowserUtils;
 import com.vytrack.utilities.ConfigurationReader;
 import com.vytrack.utilities.Driver;
-import com.vytrack.utilities.VytrackUtils;
+import com.vytrack.utilities.VyTrackUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -35,7 +35,7 @@ public class US_60_EditCarInfo extends TestBase {
     @Test(dataProvider = "US-60_Credentials")
     public void edit_car_info_test(String username, String passwords) {
 
-        VytrackUtils.login(ConfigurationReader.getProperty(username), ConfigurationReader.getProperty(passwords)); //it's for login to homepage
+        VyTrackUtils.login(ConfigurationReader.getProperty(username), ConfigurationReader.getProperty(passwords)); //it's for login to homepage
         //BrowserUtils.sleep(2);
         //1. Find a Fleet tab and hover on it
 

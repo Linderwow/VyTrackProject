@@ -25,6 +25,7 @@ public class TestBase {
         faker = new Faker();
         actions = new Actions(Driver.getDriver());
         js = (JavascriptExecutor) Driver.getDriver(); //down casting to JS
+
         getDriver().get(getProperty("env"));
         LoginPage=new LoginPage();
         TopMenu=new TopMenu();
