@@ -18,7 +18,8 @@ public class TestBase {
 
     @BeforeMethod
     public void setUp(){
-        getDriver().get(getProperty("env"));
+    getDriver().get(getProperty("env"));
+
         LoginPage=new LoginPage();
         TopMenu=new TopMenu();
         webDriverWait=new WebDriverWait(getDriver(),10);

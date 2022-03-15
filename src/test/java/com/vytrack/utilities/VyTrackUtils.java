@@ -31,6 +31,22 @@ public class VyTrackUtils {
         getDriver().findElement(By.tagName("button")).click();
     }
 
+    public static void loginAsDriver(int sleectEnv_1_or_2) {
+        //go to website
+        if (sleectEnv_1_or_2==1){
+            getDriver().get(getProperty("env"));
+        }else {
+            getDriver().get(getProperty("env"+sleectEnv_1_or_2));
+        }
+        // pass username
+        // Driver.getDriver().findElement(By.cssSelector("#prependedInput"));
+        getDriver().findElement(By.id("prependedInput")).sendKeys(getProperty("usernameTruckDrivers1"));
+        //pass password
+        getDriver().findElement(By.cssSelector("#prependedInput2")).sendKeys(getProperty("password"));
+        //click login button
+        getDriver().findElement(By.tagName("button")).click();
+    }
+
     public static void loginAsStoreManager() {
         //go to website
         getDriver().get(getProperty("env"));
@@ -43,9 +59,41 @@ public class VyTrackUtils {
         getDriver().findElement(By.tagName("button")).click();
     }
 
+    public static void loginAsStoreManager(int sleectEnv_1_or_2) {
+        //go to website
+        if (sleectEnv_1_or_2==1){
+            getDriver().get(getProperty("env"));
+        }else {
+            getDriver().get(getProperty("env"+sleectEnv_1_or_2));
+        }
+        // pass username
+        // Driver.getDriver().findElement(By.cssSelector("#prependedInput"));
+        getDriver().findElement(By.id("prependedInput")).sendKeys(getProperty("usernameStoreManager1"));
+        //pass password
+        getDriver().findElement(By.cssSelector("#prependedInput2")).sendKeys(getProperty("password"));
+        //click login button
+        getDriver().findElement(By.tagName("button")).click();
+    }
+
     public static void loginAsSalesManager() {
         //go to website
         getDriver().get(getProperty("env"));
+        // pass username
+        // Driver.getDriver().findElement(By.cssSelector("#prependedInput"));
+        getDriver().findElement(By.id("prependedInput")).sendKeys(getProperty("usernameSalesManager1"));
+        //pass password
+        getDriver().findElement(By.cssSelector("#prependedInput2")).sendKeys(getProperty("password"));
+        //click login button
+        getDriver().findElement(By.tagName("button")).click();
+    }
+
+    public static void loginAsSalesManager(int sleectEnv_1_or_2) {
+        //go to website
+        if (sleectEnv_1_or_2==1){
+            getDriver().get(getProperty("env"));
+        }else {
+            getDriver().get(getProperty("env"+sleectEnv_1_or_2));
+        }
         // pass username
         // Driver.getDriver().findElement(By.cssSelector("#prependedInput"));
         getDriver().findElement(By.id("prependedInput")).sendKeys(getProperty("usernameSalesManager1"));
