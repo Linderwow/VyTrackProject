@@ -1,15 +1,13 @@
 package com.vytrack.test;
 
-import com.github.javafaker.Faker;
+import com.vytrack.pages.TopMenu;
 import com.vytrack.pages.Vehicle;
-import com.vytrack.utilities.BrowserUtils;
 import com.vytrack.utilities.ConfigurationReader;
 import com.vytrack.utilities.Driver;
 import com.vytrack.utilities.VyTrackUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
