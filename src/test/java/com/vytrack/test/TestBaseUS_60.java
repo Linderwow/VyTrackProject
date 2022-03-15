@@ -12,7 +12,7 @@ import org.testng.annotations.BeforeMethod;
 import static com.vytrack.utilities.ConfigurationReader.getProperty;
 import static com.vytrack.utilities.Driver.getDriver;
 
-public class TestBase {
+public class TestBaseUS_60 {
     Actions actions;
     Faker faker;
     JavascriptExecutor js;
@@ -26,7 +26,7 @@ public class TestBase {
         actions = new Actions(Driver.getDriver());
         js = (JavascriptExecutor) Driver.getDriver(); //down casting to JS
 
-        getDriver().get(getProperty("env"));
+        getDriver().get(getProperty("env2"));
         LoginPage=new LoginPage();
         TopMenu=new TopMenu();
 

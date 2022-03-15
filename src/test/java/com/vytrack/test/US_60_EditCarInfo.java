@@ -19,7 +19,7 @@ import java.util.List;
 
 import static org.testng.AssertJUnit.assertEquals;
 
-public class US_60_EditCarInfo extends TestBase {
+public class US_60_EditCarInfo extends TestBaseUS_60 {
     Vehicle vehicle;
 
     @DataProvider(name = "US-60_Credentials")
@@ -60,6 +60,8 @@ public class US_60_EditCarInfo extends TestBase {
         }
 
         actions.moveToElement(vehicle.allOfDots.get(num)).pause(1000).click(vehicle.allOfDots.get(num)).pause(2000).perform();
+
+        VyTrackUtils.waitTillLoaderMaskDisappear();
 
         String delete = vehicle.deleteButton.getAttribute("title");
         String edit = vehicle.editButton.getAttribute("title");
