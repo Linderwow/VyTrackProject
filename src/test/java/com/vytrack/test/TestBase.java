@@ -15,7 +15,7 @@ public class TestBase {
     public static TopMenu TopMenu;
     @BeforeMethod
     public void setUp(){
-        getDriver().get(getProperty("env"));
+
         LoginPage=new LoginPage();
         TopMenu=new TopMenu();
 
