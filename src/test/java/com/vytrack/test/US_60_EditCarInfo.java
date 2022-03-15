@@ -18,7 +18,7 @@ import java.util.List;
 import static org.testng.AssertJUnit.assertEquals;
 
 public class US_60_EditCarInfo extends TestBaseUS_60 {
-    Vehicle vehicle;
+
 
     @DataProvider(name = "US-60_Credentials")
     public Object[][] credentials() {
@@ -32,7 +32,6 @@ public class US_60_EditCarInfo extends TestBaseUS_60 {
     @Test(dataProvider = "US-60_Credentials")
     public void edit_car_info_test(String username, String passwords) {
 
-        vehicle = new Vehicle();
         VyTrackUtils.login(ConfigurationReader.getProperty(username), ConfigurationReader.getProperty(passwords)); //it's for login to homepage
 
         actions.moveToElement(TopMenu.fleetLink).perform();
