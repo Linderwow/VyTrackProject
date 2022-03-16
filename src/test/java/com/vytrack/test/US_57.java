@@ -1,7 +1,7 @@
 package com.vytrack.test;
 import com.vytrack.utilities.BrowserUtils;
 import com.vytrack.utilities.Driver;
-import com.vytrack.utilities.VytrackUtils;
+import com.vytrack.utilities.VyTrackUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -20,9 +20,8 @@ public class US_57 extends TestBase{
           “How To Use Pinbar” and
           “Use pin icon on the right top corner of the page to create fast
            access link in the pinbar.”*/
-          // VytrackUtils.login(username, password); ==> this is with dataProvider
 
-       VytrackUtils.loginAsDriver();
+        VyTrackUtils.loginAsDriver();
 
         BrowserUtils.sleep(5);
         WebElement text = Driver.getDriver().findElement(By.xpath("//a[.='Learn how to use this space']"));
@@ -50,15 +49,14 @@ WebElement picture = Driver.getDriver().findElement(By.xpath("//img[@src='/bundl
 
 }
     @Test
-    public void StoreManer (){
+    public void StoreManger (){
       /*  AC1:when users click click the “Learn how to use this space”
           link on the homepage, users should see:
           “How To Use Pinbar” and
           “Use pin icon on the right top corner of the page to create fast
            access link in the pinbar.”*/
-        // VytrackUtils.login(username, password); ==> this is with dataProvider
 
-        VytrackUtils.loginAsStoreManager();
+        VyTrackUtils.loginAsStoreManager();
 
         BrowserUtils.sleep(5);
         WebElement text = Driver.getDriver().findElement(By.xpath("//a[.='Learn how to use this space']"));
@@ -93,9 +91,8 @@ Expected source:
           “How To Use Pinbar” and
           “Use pin icon on the right top corner of the page to create fast
            access link in the pinbar.”*/
-        // VytrackUtils.login(username, password); ==> this is with dataProvider
 
-        VytrackUtils.loginAsSalesManager();
+        VyTrackUtils.loginAsStoreManager();
 
         BrowserUtils.sleep(5);
         WebElement text = Driver.getDriver().findElement(By.xpath("//a[.='Learn how to use this space']"));
@@ -126,30 +123,4 @@ Expected source:
 
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
