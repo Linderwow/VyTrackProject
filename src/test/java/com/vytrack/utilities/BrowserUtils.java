@@ -4,6 +4,8 @@ package com.vytrack.utilities;
 In this class only general utility methods that are not related to some specific page.
  */
 
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 
 import java.util.Set;
@@ -22,8 +24,6 @@ public class BrowserUtils {
 
         }
     }
-
-
     /*
     This method accepts 3 arguments.
     Arg1: webdriver
@@ -50,12 +50,16 @@ public class BrowserUtils {
         String actualTitle = Driver.getDriver().getTitle();
         Assert.assertTrue(actualTitle.contains(expectedInTitle));
     }
-
     /*
     This method accepts a String "expectedTitle" and Asserts if it is true
      */
 
     public static void verifyTitle(String expectedTitle){
         Assert.assertEquals(Driver.getDriver().getTitle(), expectedTitle);
+    }
+
+    public static void hover(WebElement element){
+        Actions actions = new Actions(Driver.getDriver());
+        actions.moveToElement(element).pause(3).perform();
     }
 }
