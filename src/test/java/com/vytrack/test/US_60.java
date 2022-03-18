@@ -1,7 +1,4 @@
 package com.vytrack.test;
-
-import com.vytrack.pages.TopMenu;
-import com.vytrack.pages.Vehicle;
 import com.vytrack.utilities.ConfigurationReader;
 import com.vytrack.utilities.Driver;
 import com.vytrack.utilities.VyTrackUtils;
@@ -10,16 +7,14 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 import static org.testng.AssertJUnit.assertEquals;
 
-public class US_60_EditCarInfo extends TestBaseUS_60 {
+public class US_60 extends TestBaseUS_60 {
 
-//
     @DataProvider(name = "US-60_Credentials")
     public Object[][] credentials() {
         return new Object[][]{{"usernameStoreManager4", "password"},

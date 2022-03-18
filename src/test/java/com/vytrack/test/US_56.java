@@ -1,11 +1,9 @@
 package com.vytrack.test;
-
 import com.vytrack.utilities.Driver;
-import com.vytrack.utilities.VytrackUtils;
+import com.vytrack.utilities.VyTrackUtils;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import java.util.Iterator;
 import java.util.Set;
 
@@ -14,7 +12,7 @@ public class US_56 extends TestBase {
     @Test
     public void verify_page() {
 
-        VytrackUtils.loginAsSalesManager();
+        VyTrackUtils.loginAsSalesManager();
         Driver.getDriver().findElement(By.xpath("//i[@title='Get help']")).click();
         Set<String> windowHandles = Driver.getDriver().getWindowHandles();
         String currentTitle = "";

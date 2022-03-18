@@ -8,14 +8,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class US_59_ViewColumnsAsManagers extends TestBase{
+public class US_59 extends TestBase{
 
-//
     @Test
     public void verify_columns_as_sales_manager1(){
 

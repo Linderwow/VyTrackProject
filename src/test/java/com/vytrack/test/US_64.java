@@ -1,11 +1,6 @@
 package com.vytrack.test;
-
 import com.vytrack.pages.CreateCalendar;
-import com.vytrack.utilities.Driver;
-import com.vytrack.utilities.VyTrackUtils;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
-
 import static com.vytrack.utilities.ConfigurationReader.getProperty;
 import static com.vytrack.utilities.Driver.getDriver;
 

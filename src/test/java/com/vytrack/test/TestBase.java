@@ -10,7 +10,6 @@ import static com.vytrack.utilities.ConfigurationReader.getProperty;
 import static com.vytrack.utilities.Driver.getDriver;
 
 public class TestBase {
-//
     public static LoginPage LoginPage;
     public static TopMenu TopMenu;
     public static WebDriverWait webDriverWait;
