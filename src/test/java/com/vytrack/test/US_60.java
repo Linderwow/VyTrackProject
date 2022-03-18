@@ -13,7 +13,7 @@ import java.util.List;
 
 import static org.testng.AssertJUnit.assertEquals;
 
-public class US_60 extends TestBaseUS_60 {
+public class US_60 extends TB_US_60 {
 
     @DataProvider(name = "US-60_Credentials")
     public Object[][] credentials() {

@@ -13,7 +13,7 @@ import org.testng.annotations.BeforeMethod;
 
 import static com.vytrack.utilities.ConfigurationReader.getProperty;
 
-public class TestBaseUS_60 {
+public class TB_US_60 {
     public static Actions actions;
     public static Faker faker;
     public static JavascriptExecutor js;
