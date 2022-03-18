@@ -1,8 +1,7 @@
 package com.vytrack.test;
-
 import com.vytrack.utilities.ConfigurationReader;
 import com.vytrack.utilities.Driver;
-import com.vytrack.utilities.VytrackUtils;
+import com.vytrack.utilities.VyTrackUtils;
 import com.vytrack.utilities.WebTableUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -16,12 +15,12 @@ import java.util.List;
 
 public class US_59_ViewColumnsAsManagers extends TestBase{
 
-
+//
     @Test
     public void verify_columns_as_sales_manager1(){
 
     //login as sales manager
-    VytrackUtils.loginAsSalesManager();
+    VyTrackUtils.loginAsSalesManager();
 
     //go to Fleet tab
     WebElement fleetTabElement = TopMenu.fleetLink;
@@ -31,7 +30,7 @@ public class US_59_ViewColumnsAsManagers extends TestBase{
 
     //we are using for waiting until loader mask disappearing
     vehiclesModelElement.click();
-    VytrackUtils.waitTillLoaderMaskDisappear();
+    VyTrackUtils.waitTillLoaderMaskDisappear();
     List<String> actualheadersFromVehicleModelTable = WebTableUtils.getHeadersFromVehicleModelTable();
     List<String> expectedheadersFromVehicleModelTable=new ArrayList<>(Arrays.asList(
             "MODEL NAME",
@@ -55,7 +54,7 @@ public class US_59_ViewColumnsAsManagers extends TestBase{
    public void verify_columns_as_sales_manager2(){
        //login as sales manager
 
-       VytrackUtils.login(ConfigurationReader.getProperty("usernameSalesManager2"),ConfigurationReader.getProperty("password"));
+       VyTrackUtils.login(ConfigurationReader.getProperty("usernameSalesManager2"),ConfigurationReader.getProperty("password"));
 
        //go to Fleet tab
        WebElement fleetTabElement = TopMenu.fleetLink;
@@ -65,7 +64,7 @@ public class US_59_ViewColumnsAsManagers extends TestBase{
 
        //we are using for waiting until loader mask disappearing
        vehiclesModelElement.click();
-       VytrackUtils.waitTillLoaderMaskDisappear();
+       VyTrackUtils.waitTillLoaderMaskDisappear();
        List<String> actualheadersFromVehicleModelTable = WebTableUtils.getHeadersFromVehicleModelTable();
        List<String> expectedheadersFromVehicleModelTable=new ArrayList<>(Arrays.asList(
                "MODEL NAME",
@@ -89,7 +88,7 @@ public class US_59_ViewColumnsAsManagers extends TestBase{
    public void verify_columns_as_sales_manager3() {
        //login as sales manager
 
-       VytrackUtils.login(ConfigurationReader.getProperty("usernameSalesManager3"), ConfigurationReader.getProperty("password"));
+       VyTrackUtils.login(ConfigurationReader.getProperty("usernameSalesManager3"), ConfigurationReader.getProperty("password"));
 
        //go to Fleet tab
        WebElement fleetTabElement = TopMenu.fleetLink;
@@ -99,7 +98,7 @@ public class US_59_ViewColumnsAsManagers extends TestBase{
 
        //we are using for waiting until loader mask disappearing
        vehiclesModelElement.click();
-       VytrackUtils.waitTillLoaderMaskDisappear();
+       VyTrackUtils.waitTillLoaderMaskDisappear();
        List<String> actualheadersFromVehicleModelTable = WebTableUtils.getHeadersFromVehicleModelTable();
        List<String> expectedheadersFromVehicleModelTable = new ArrayList<>(Arrays.asList(
                "MODEL NAME",
@@ -122,7 +121,7 @@ public class US_59_ViewColumnsAsManagers extends TestBase{
     public void verify_columns_as_store_manager1(){
 
     //login as sales manager
-    VytrackUtils.loginAsStoreManager();
+    VyTrackUtils.loginAsStoreManager();
 
     //go to Fleet tab
     WebElement fleetTabElement = Driver.getDriver().findElement(By.xpath("//span[normalize-space()='Fleet' and contains(@class, 'title title-level-1')]"));
@@ -132,7 +131,7 @@ public class US_59_ViewColumnsAsManagers extends TestBase{
 
     //we are using for waiting until loader mask disappearing
     vehiclesModelElement.click();
-    VytrackUtils.waitTillLoaderMaskDisappear();
+    VyTrackUtils.waitTillLoaderMaskDisappear();
     List<String> actualheadersFromVehicleModelTable = WebTableUtils.getHeadersFromVehicleModelTable();
     List<String> expectedheadersFromVehicleModelTable=new ArrayList<>(Arrays.asList(
             "MODEL NAME",
@@ -155,7 +154,7 @@ public class US_59_ViewColumnsAsManagers extends TestBase{
     public void verify_columns_as_store_manager2(){
 
         //login as sales manager
-        VytrackUtils.login(ConfigurationReader.getProperty("usernameStoreManager2"),ConfigurationReader.getProperty("password"));
+        VyTrackUtils.login(ConfigurationReader.getProperty("usernameStoreManager2"),ConfigurationReader.getProperty("password"));
 
         //go to Fleet tab
         WebElement fleetTabElement = Driver.getDriver().findElement(By.xpath("//span[normalize-space()='Fleet' and contains(@class, 'title title-level-1')]"));
@@ -165,7 +164,7 @@ public class US_59_ViewColumnsAsManagers extends TestBase{
 
         //we are using for waiting until loader mask disappearing
         vehiclesModelElement.click();
-        VytrackUtils.waitTillLoaderMaskDisappear();
+        VyTrackUtils.waitTillLoaderMaskDisappear();
         List<String> actualheadersFromVehicleModelTable = WebTableUtils.getHeadersFromVehicleModelTable();
         List<String> expectedheadersFromVehicleModelTable=new ArrayList<>(Arrays.asList(
                 "MODEL NAME",
@@ -188,7 +187,7 @@ public class US_59_ViewColumnsAsManagers extends TestBase{
     public void verify_columns_as_store_manager3(){
 
         //login as sales manager
-        VytrackUtils.login(ConfigurationReader.getProperty("usernameStoreManager3"),ConfigurationReader.getProperty("password"));
+        VyTrackUtils.login(ConfigurationReader.getProperty("usernameStoreManager3"),ConfigurationReader.getProperty("password"));
 
         //go to Fleet tab
         WebElement fleetTabElement = Driver.getDriver().findElement(By.xpath("//span[normalize-space()='Fleet' and contains(@class, 'title title-level-1')]"));
@@ -198,7 +197,7 @@ public class US_59_ViewColumnsAsManagers extends TestBase{
 
         //we are using for waiting until loader mask disappearing
         vehiclesModelElement.click();
-        VytrackUtils.waitTillLoaderMaskDisappear();
+        VyTrackUtils.waitTillLoaderMaskDisappear();
         List<String> actualheadersFromVehicleModelTable = WebTableUtils.getHeadersFromVehicleModelTable();
         List<String> expectedheadersFromVehicleModelTable=new ArrayList<>(Arrays.asList(
                 "MODEL NAME",
