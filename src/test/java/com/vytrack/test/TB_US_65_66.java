@@ -39,25 +39,25 @@ public class TB_US_65_66 {
         if (VY.getName().equals("AC1_OdoCheckStoreManager")) {
             return new Object[][]{{"usernameStoreManager1", "password" },
                     {"usernameStoreManager2", "password"},
-//                    {"usernameStoreManager3","password" },
-//                    {"usernameStoreManager4","password" },
-//                    {"usernameStoreManager5","password" },
-//                    {"usernameStoreManager6","password" },
+                    {"usernameStoreManager3","password" },
+                    {"usernameStoreManager4","password" },
+                    {"usernameStoreManager5","password" },
+                    {"usernameStoreManager6","password" },
             };
         } else if(VY.getName().equals("AC1_OdoCheckSalesManager")){
             return new Object[][]{{"usernameSalesManager1","password" },
                     {"usernameSalesManager2","password" },
-//                    {"usernameSalesManager3","password" },
-//                    {"usernameSalesManager4","password" },
+                    {"usernameSalesManager3","password" },
+                    {"usernameSalesManager4","password" },
 
             };}else
             return new Object[][]{{"usernameTruckDrivers1", "password"},
                     {"usernameTruckDrivers2", "password"},
-//                    {"usernameTruckDrivers3", "password"},
-//                    {"usernameTruckDrivers4", "password"},
-//                    {"usernameTruckDrivers5", "password"},
-//                    {"usernameTruckDrivers6", "password"},
-//                    {"usernameTruckDrivers7", "password"},
+                    {"usernameTruckDrivers3", "password"},
+                    {"usernameTruckDrivers4", "password"},
+                    {"usernameTruckDrivers5", "password"},
+                    {"usernameTruckDrivers6", "password"},
+                    {"usernameTruckDrivers7", "password"},
             };
     }
     public static void loginToAccount(String username,String password){
